@@ -1,6 +1,6 @@
 # Vad är en signal?
 
-## Inledning
+## Förord
 
 ### Syftet med utbildningen
 
@@ -102,8 +102,9 @@ Det finns många anlednigar till varför man vill kunna analysera en signal med 
 
 <br>
 
+> Frekvensen är det inverterade värdet av periodtiden: <br> $f = 1 / T$
+
 > Sambandet mellan ljusets utbredningshastighet c i vakuum, frekvensen f och våglängden λ: <br> $λ = c / f$ <br>
-> Frekvensen är det inverterade värdet av periodtiden: <br> $2 \times 10^{14}$
 
 > *Transformteori* är ett sammanfattande namn på de delar av matematiken som beskriver transformer. Här kan du läsa mer om [Fouriertransform](https://sv.wikipedia.org/wiki/Fouriertransform)
 
@@ -125,10 +126,20 @@ I figuren nedan ses en skärmdump tagen över ett skarpt frekvensspektrum. En ra
 
 Utöver att mottagaren tar emot signalen med en viss signalstyrka, alokerar signalens bredd ett visst frekvensutrymme. Signalens bredd benäms bandbredd. Bandbredden är ett mått på det frekvensområde som en signal upptar, och en högre informationsöverföringshastighet kräver ett större frekvensområde för att kunna överföra mer data per tidsenhet.
 
-I foten på nyttosignalerna ses ett blått område som övergår i svart. BRUS.........
+I foten på nyttosignalerna ses ett blått område som övergår i svart. Området består av brus där "taket" av rektangeln benämns brusgolv. Brus är en signal där vi inte känner signalens tidsfunktion, utan bara dess amplitudspektrum. Brus alstras av flera olika, av varandra oberoende generatorer. Alstringen sker bland annat i atmosfären, i rymden och internt i våran mottagare med egenskapen att amplituden följer normalfördelningsprincipen.
+
+### Varför är det viktigt?
+
+Den fysikaliska faktorn avgränsar oss till att använda vissa frekvenser även fast frekvenserna, inom ramen för signalteorin kan anta ett oändligt antal värden. Vi måste också förhålla oss till den omgivning som vi sänder och mottager i. En för svag mottagen signal löper risk att "försvinna" i bruset.
+
+Överföring av information med hjälp av elektromagnetisk energi kommer alltså med begränsningar. Mer om dessa begränsningar i efterföljande kapitel.
+
 <br>
 
 ![SDR](./sdr.JPG "SDR#")
+
+
+> Här kan du förkovra dig i brus; [AGWN.](https://en.wikipedia.org/wiki/Additive_white_Gaussian_noise)
 
 > Vill du börja leta signaler? Hobbyn är billig och kräver ingen särskilld förkunskap. Läs mer om [SDR.](https://www.rtl-sdr.com/rtl-sdr-quick-start-guide/)
 
