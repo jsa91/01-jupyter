@@ -148,9 +148,70 @@ Den fysikaliska faktorn avgränsar oss till att använda vissa frekvenser även 
 ---
 
 <details>
-<summary><h2 id="chapter-4-brus">Kapitel 4: Brus</h2></summary>
+<summary><h2 id="chapter-4-brus">Kapitel 4: Signal till brus</h2></summary>
 
 ### Definition
+
+När en signal lämnare en sändare genomför det med en viss mängd effekt (W). Intill dess att signalen uppfattas av mottagaren kommer den utsättas för *dämpning*. Alla delar i en signalkedja som inte förstärker signalen kommer att påverka den negativt, till exempel förlust i kabel och fri i rymd. Däpningen är även relaterad till frekvensen, där däpningen ökar med ökad frekvens.
+
+När en mottagare tar emot en signal, gör den det med en viss kvalitet. Kvaliteten på signalen kan mätas på många olika vis. Ett sätt är att bestämma dess signal-brus-förhållande (SNR), vilket är skillnaden i nivå mellan signal och brus. SNR mäts i decibel (dB).
+
+
+![Signal-Brus-Förhållande](./snr.png "snr")
+
+Det logaritimiska måttet dB är en användbart verktyg när stora och små värden hanteras samtidigt. Genom att använda dB kan till exempel en hög och låg signalstyrka jämföras även fast de linjära värdena ligger långt från varandra. dB är ett relavitvt mått och har per definition ingen enhet. Måttet refereras istället till en effektnivå.
+
+<br>
+
+<div align="center">
+
+$dBm = 10 \cdot \log_{10}(mW) + 30$
+
+</div>
+
+<div style="display: flex; justify-content: space-between;">
+
+<div style="flex: 1; margin-right: 10px;">
+  
+| Linjär (mW)   | Logaritmisk (dBm)  | 
+|---------------|--------------------|
+| 1             | 0                  |
+| 2             | 3                  |
+| 10            | 10                 |
+| 100           | 20                 |
+| 1000          | 30                 |
+
+</div>
+
+<div style="flex: 1; margin-left: 10px;">
+
+| dBm   | Sändare     |
+|-------|-------------|
+| 80    | Rundradio   |
+| 60    | Mikrovågsugn|
+| 27    | Mobilsite   |
+| 15    | WiFi        |
+| 10    | Bluetooth   |
+
+
+</div>
+
+</div>
+
+### Varför är det viktigt?
+När ett system för kommunikationsöverföring designas måste tillgänglig effekt budgeteras, vilket kallas för länkbudget. Genom att räkna på signalstyrkan för varje steg i överföringskedjan och analysera förluster är det i slutändan mottagarens tolerans för SNR som är gränssättande. Om insignalen till mottagaren har utsatts för hög däpning under överföringen riskerar signalen försvinna i bruset och informationen går förlorad.
+
+> Här kan du läsa mer om [länkbudget.](https://pysdr.org/content/link_budgets.html)
+
+<br>
+
+Ett sätt att visualisera hur en digital signal uppträder i en mottagare är att använda ett konstellationsdiagram. Desto mer brus som signalen (QPSK) utsätts för, desto svårare har mottagaren att uppfatta rätt symbol. Alltså kommer bitfelshalten (BER) att öka med med minskad SNR.  
+
+![QPSK+AGWN](./qpsk.png "QPSK+AGWN")
+
+> Ett sätt att ta höjd för höga bitfelshalter är att nyttja [kanalkodning.](https://sv.wikipedia.org/wiki/Kodningsteori)
+
+> Mer om digital fasmodulering i radiolänk; [TCM.](https://en.wikipedia.org/wiki/Trellis_coded_modulation)
 
 </details>
 
