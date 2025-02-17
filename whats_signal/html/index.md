@@ -2,7 +2,7 @@
 
 ### Syftet med utbildningen
 
-Att ge individen, oberoende fördjupningsområde, en förståelse för grundläggande fysik med utgångspunkt från specifik verksamhet och nomenklatur. Utbildningen skall genomföras under individens första tid för att ge möjligheten att se samband mellan fysik och de begrepp och den teknik som vardagen består av. Känslan av att verksamheten består av ”svart magi” ska minska. Utbildningen skall också ses som en grund till vidare teknisk utbildning inom respektive fördjupningsområde, som i många fall kommer senare.
+Att ge individen, oberoende fördjupningsområde, en förståelse för grundläggande fysik med utgångspunkt från specifik verksamhet och nomenklatur. Utbildningen skall genomföras under individens första tid för att ge möjligheten att se samband mellan fysik och de begrepp och den teknik som vardagen består av. Känslan av att verksamheten består av ”svart magi” ska minska. Utbildningen skall också ses som en grund till vidare teknisk utbildning inom respektive fördjupningsområde.
 
 ### Målet med utbildningen
 
@@ -133,7 +133,7 @@ Ett frekvensspektrum är ett avgränsat område med frekvenser. Inom radioteknik
 
 I figuren nedan ses en skärmdump tagen över ett skarpt frekvensspektrum. En radiomottagare som kopplats till en dator har konfigurerats att motta signaler runt omkring 140 MHz - 150 MHz. X-axeln visar frekvensen och y-axeln visar amplituden. Mitt i figuren ses ett antal signaler som i detta fall bär en nyttosignal. Flera av de nyttosignaler som mottagaren tar emot har mjukvaran markerat med gula cirklar för att påvisa signalens amplitud. 
 
-Utöver att mottagaren tar emot signalen med en viss signalstyrka, alokerar signalens bredd ett visst frekvensutrymme. Signalens bredd benämns bandbredd. Bandbredden är ett mått på det frekvensområde som en signal upptar, och en högre informationsöverföringshastighet kräver ett större frekvensområde för att kunna överföra mer data per tidsenhet.
+Utöver att mottagaren tar emot signalen med en viss signalstyrka, allokerar signalens bredd ett visst frekvensutrymme. Signalens bredd benämns bandbredd. Bandbredden är ett mått på det frekvensområde som en signal upptar, och en högre informationsöverföringshastighet kräver ett större frekvensområde för att kunna överföra mer data per tidsenhet.
 
 I foten på nyttosignalerna ses ett blått område som övergår i svart. Området består av brus där "taket" av rektangeln benämns brusgolv. Brus är en signal där vi inte känner signalens tidsfunktion, utan bara dess amplitudspektrum. Brus alstras av flera olika, av varandra oberoende generatorer. Alstringen sker bland annat i atmosfären, i rymden och internt i vår mottagare. Brus har egenskapen att amplituden följer normalfördelningsprincipen.
 
@@ -153,7 +153,7 @@ Den fysikaliska faktorn avgränsar oss till att använda vissa frekvenser även 
 
 > Här kan du förkovra dig i brus; [AGWN.](https://en.wikipedia.org/wiki/Additive_white_Gaussian_noise)
 
-> Vill du börja leta signaler? Hobbyn är billig och kräver ingen särskilld förkunskap. Läs mer om [SDR.](https://www.rtl-sdr.com/rtl-sdr-quick-start-guide/)
+> Vill du börja leta signaler? Hobbyn är billig och kräver ingen särskild förkunskap. Läs mer om [SDR.](https://www.rtl-sdr.com/rtl-sdr-quick-start-guide/)
 
 </details>
 
@@ -175,7 +175,7 @@ När mottagaren tar emot signalen, gör den detta med en viss kvalitet. Kvalitet
 
 </div>
 
-Det logaritimiska måttet dB är en användbart verktyg när stora och små värden hanteras samtidigt. Genom att använda dB kan till exempel en hög och låg signalstyrka jämföras även fast de linjära värdena ligger långt från varandra. dB är ett relavitvt mått och har per definition ingen enhet. Måttet refereras istället till en effektnivå.
+Det logaritmiska måttet dB är ett användbart verktyg när stora och små värden hanteras samtidigt. Genom att använda dB kan till exempel en hög och låg signalstyrka jämföras även fast de linjära värdena ligger långt från varandra. dB är ett relativt mått och har per definition ingen enhet. Måttet refereras istället till en effektnivå.
 
 <br>
 
@@ -219,11 +219,11 @@ $dBm = 10 \cdot \log_{10}(mW) + 30$
 </div>
 
 ### Varför är det viktigt?
-När ett system för kommunikationsöverföring designas måste tillgänglig effekt budgeteras, vilket kallas för [länkbudget.](https://pysdr.org/content/link_budgets.html) Genom att räkna på signalstyrkan för varje steg i överföringskedjan och analysera förluster är det i slutändan mottagarens tolerans för SNR som är gränssättande. Om insignalen till mottagaren har utsatts för hög däpning under överföringen riskerar signalen försvinna i bruset och informationen går förlorad.
+När ett system för kommunikationsöverföring designas måste tillgänglig effekt budgeteras, vilket kallas för [länkbudget.](https://pysdr.org/content/link_budgets.html) Genom att räkna på signalstyrkan för varje steg i överföringskedjan och analysera förluster är det i slutändan mottagarens tolerans för SNR som är gränssättande. Om insignalen till mottagaren har utsatts för hög dämpning under överföringen riskerar signalen försvinna i bruset och informationen går förlorad.
 
 <br>
 
-Ett sätt att visualisera hur en digital signal uppträder i en mottagare är att använda ett konstellationsdiagram. Desto mer brus som signalen ([QPSK](https://en.wikipedia.org/wiki/Phase-shift_keying)) utsätts för, desto svårare har mottagaren att uppfatta rätt symbol. Resultatet blir att bitfelssannolikheten (BER) ökar med med minskad SNR.  
+Ett sätt att visualisera hur en digital signal uppträder i en mottagare är att använda ett konstellationsdiagram. Desto mer brus som signalen ([QPSK](https://en.wikipedia.org/wiki/Phase-shift_keying)) utsätts för, desto svårare har mottagaren att uppfatta rätt symbol. Resultatet blir att bitfelssannolikheten (BER) ökar med minskad SNR.  
 
 <div align="center">
 
@@ -242,7 +242,7 @@ Ett sätt att visualisera hur en digital signal uppträder i en mottagare är at
 
 ### Definition
 
-När en godtycklig mängd information överförs över en kanal, har kanalen en specifik kapacitet (*D*), vilket definierar den maximala mängden information som kan överföras per tidsenhet utan att informationen förloras eller förvrängs. Kapaciteten beror på flera faktorer, såsom kanalens bandbredd, signalstyrka samt förekomsten av brus och störningar.
+När en godtycklig mängd information överförs över en *kanal*, har kanalen en specifik kapacitet (*D*), vilket definierar den maximala mängden information som kan överföras per tidsenhet utan att informationen förloras eller förvrängs. Kapaciteten beror på flera faktorer, såsom kanalens bandbredd, signalstyrka samt förekomsten av brus och störningar.
 
 Kanske den mest fundamentala formen av definierad kapacitet är den som en traditionell telefonförbindelse inom det fasta telenätet erbjuder. Talkodaren för fasta telenätet är en vågformskodare, som känner av (samplar) talsignalens amplitud 8000 ggr per sekund. Spänningen i varje sample beskrivs med 8 databitar.
 
@@ -271,7 +271,7 @@ När ett telekomföretag idag investerar i ny kommunikationsteknologi sker det f
 | PDH                   | <ul><li>E1: 2048 Mbit/s</li></ul>                                                                        |
 | SDH                   | <ul><li>STM-1: 155,52 Mbit/s</li><li>STM-4: 622,08 Mbit/s</li><li>STM-16: 2,488 Gbit/s</li></ul>         |
 | Ethernet              | <ul><li>1G: 1 Gbit/s</li><li>10G: 10 Gbit/s</li></ul>                                                    |
-| Fiberoptiska nät      | <ul><li>WDM: fleratalet Tbit/s</li></ul>                                                                 |
+| Fiberoptiska nät      | <ul><li>WDM: flertalet Tbit/s</li></ul>                                                                 |
 | Satellitkommunikation | Abonnemang                                                                                               |
 | 4G LTE                | Upp till 1.5 Gbit/s                                                                                      |
 | 5G NR                 | Upp till 20 Gbit/s                                                                                       |
@@ -293,5 +293,4 @@ Workshop och labb
 
 **Skapare:** Johannes Andersson
 
-**Datum skapad:** 2025-02-17  
-
+**Datum uppdaterad:** 2025-02-17
