@@ -90,12 +90,10 @@ I föregående kapitel har vi undersökt matematiska och fysikaliska fenomen med
 - **Tidsdomän**: Visar hur en signal förändras över tid. Här kan du observera signalens värde vid varje givet ögonblick.
 - **Frekvensdomän**: Visar fördelningen av signalen över olika frekvenser, det vill säga hur mycket av signalen som finns vid varje frekvens.
 
-
-### Varför är det viktigt?
-Det finns många anledningar till varför det är viktigt att kunna analysera en signal i olika domäner. Den mest uppenbara är att det förenklar studiet av repetitiva fenomen, såsom radiovågor. 
-
 I grafen nedan visas en signal i **tidsdomänen**, där **tid (s)** är på x-axeln, samt en signal i **frekvensdomänen**, där **frekvens (Hz)** är på x-axeln.
 
+### Varför är det viktigt?
+Det finns många anledningar till varför det är viktigt att kunna analysera en signal i olika domäner. Den mest uppenbara är att det förenklar studien av repetitiva fenomen, såsom radiovågor.
 
 <br>
 
@@ -107,9 +105,9 @@ I grafen nedan visas en signal i **tidsdomänen**, där **tid (s)** är på x-ax
 
 <br>
 
-> Frekvensen är det inverterade värdet av periodtiden: <br> $f = 1 / T$
+> Frekvensen [ *f* ] är det inverterade värdet av periodtiden [ *T* ]: <br> $f = 1 / T$
 
-> Sambandet mellan ljusets utbredningshastighet c i vakuum, frekvensen f och våglängden λ: <br> $λ = c / f$ <br>
+> Sambandet mellan ljusets utbredningshastighet c [ *m/s* ] i vakuum, frekvensen f [ *hz* ] och våglängden λ [ m ]: <br> $λ = c / f$ <br>
 
 > *Transformteori* är ett sammanfattande namn på de delar av matematiken som beskriver transformer. Här kan du läsa mer om [Fouriertransform.](https://sv.wikipedia.org/wiki/Fouriertransform)
 
@@ -131,19 +129,11 @@ Ett frekvensspektrum är ett avgränsat område med frekvenser. Inom radioteknik
 
 </div>
 
-I figuren nedan ses en skärmdump tagen över ett skarpt frekvensspektrum. En radiomottagare som kopplats till en dator har konfigurerats att motta signaler runt omkring 140 MHz - 150 MHz. X-axeln visar frekvensen och y-axeln visar amplituden. Mitt i figuren ses ett antal signaler som i detta fall bär en nyttosignal. Flera av de nyttosignaler som mottagaren tar emot har mjukvaran markerat med gula cirklar för att påvisa signalens amplitud. 
+I figuren nedan ses en skärmdump tagen över ett skarpt frekvensspektrum. En radiomottagare som kopplats till en dator har konfigurerats att motta signaler runt omkring 140 MHz - 150 MHz. X-axeln visar frekvensen och y-axeln visar amplituden. Mitt i figuren ses ett antal signaler som i detta fall bär en *nyttosignal*. Flera av de nyttosignaler som mottagaren tar emot har mjukvaran markerat med gula cirklar för att påvisa signalens amplitud. 
 
 Utöver att mottagaren tar emot signalen med en viss signalstyrka, allokerar signalens bredd ett visst frekvensutrymme. Signalens bredd benämns bandbredd. Bandbredden är ett mått på det frekvensområde som en signal upptar, och en högre informationsöverföringshastighet kräver ett större frekvensområde för att kunna överföra mer data per tidsenhet.
 
 I foten på nyttosignalerna ses ett blått område som övergår i svart. Området består av brus där "taket" av rektangeln benämns brusgolv. Brus är en signal där vi inte känner signalens tidsfunktion, utan bara dess amplitudspektrum. Brus alstras av flera olika, av varandra oberoende generatorer. Alstringen sker bland annat i atmosfären, i rymden och internt i vår mottagare. Brus har egenskapen att amplituden följer normalfördelningsprincipen.
-
-### Varför är det viktigt?
-
-Den fysikaliska faktorn avgränsar oss till att använda vissa frekvenser även fast frekvenserna, inom ramen för signalteorin kan anta ett oändligt antal värden. Vi måste också förhålla oss till den omgivning som vi sänder och mottager i. En för svag mottagen signal löper risk att "försvinna" i bruset.
-
-Överföring av information med hjälp av elektromagnetisk energi kommer alltså med begränsningar. Mer om dessa begränsningar i efterföljande kapitel.
-
-<br>
 
 <div align="center">
 
@@ -151,9 +141,17 @@ Den fysikaliska faktorn avgränsar oss till att använda vissa frekvenser även 
 
 </div>
 
+### Varför är det viktigt?
+
+Den fysikaliska faktorn avgränsar oss till att använda vissa frekvenser även fast frekvenserna, inom ramen för signalteorin kan anta ett oändligt antal värden. Överföring av information med hjälp av elektromagnetisk energi kommer alltså med begränsningar. Mer om dessa begränsningar i efterföljande kapitel.
+
+<br>
+
 > Här kan du förkovra dig i brus; [AGWN.](https://en.wikipedia.org/wiki/Additive_white_Gaussian_noise)
 
-> Vill du börja leta signaler? Hobbyn är billig och kräver ingen särskild förkunskap. Läs mer om [SDR.](https://www.rtl-sdr.com/rtl-sdr-quick-start-guide/)
+> Vill du börja motta signaler med en mottagare? Hobbyn är billig och kräver ingen särskild förkunskap. Läs mer om [SDR.](https://www.rtl-sdr.com/rtl-sdr-quick-start-guide/)
+
+> Vill du börja sända signaler med en sändare? Då behöver du (nästan alltid) [tillstånd.](https://pts.se/tillstand-och-anmalan/radio/)
 
 </details>
 
@@ -164,7 +162,7 @@ Den fysikaliska faktorn avgränsar oss till att använda vissa frekvenser även 
 
 ### Definition
 
-När en signal sänds från en sändare överförs den med en viss effekt (W). Under överföringen utsätts signalen för *dämpning* innan den når mottagaren. Alla delar i signalkedjan som inte förstärker signalen kommer att påverka den negativt, till exempel förlust i kablar eller spridning i fri rymd. Dämpningen är även frekvensberoende, där den ökar med högre frekvenser.
+När en signal sänds från en sändare överförs den med en viss effekt (*W*). Under överföringen utsätts signalen för *dämpning* innan den når mottagaren. Alla delar i signalkedjan som inte förstärker signalen kommer att påverka den negativt, till exempel förlust i kablar eller spridning i fri rymd. Dämpningen är även frekvensberoende, där den ökar med högre frekvenser.
 
 När mottagaren tar emot signalen, gör den detta med en viss kvalitet. Kvaliteten på signalen kan mätas på olika sätt. Ett vanligt mått är **signal-brus-förhållande** (SNR), vilket representerar skillnaden i nivå mellan signalen och det omgivande bruset. SNR mäts i decibel (dB).
 
