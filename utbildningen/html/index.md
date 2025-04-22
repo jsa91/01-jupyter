@@ -289,6 +289,4 @@ Workshop och labb
 
 ---
 
-**Skapare:** Johannes Andersson
-
 **Datum uppdaterad:** 2025-04-22
