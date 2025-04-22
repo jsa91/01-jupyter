@@ -268,8 +268,8 @@ När ett telekomföretag idag investerar i ny kommunikationsteknologi sker det f
 
 | Teknologi             | Kapacitet                                                                                                |
 |-----------------------|----------------------------------------------------------------------------------------------------------|
-| PDH                   | <ul><li>E1: 2048 Mbit/s</li></ul>                                                                        |
-| SDH                   | <ul><li>STM-1: 155,52 Mbit/s</li><li>STM-4: 622,08 Mbit/s</li><li>STM-16: 2,488 Gbit/s</li></ul>         |
+| PDH                   | <ul><li>E1: 2.048 Mbit/s</li></ul>                                                                        |
+| SDH                   | <ul><li>STM-1: 155.52 Mbit/s</li><li>STM-4: 622.08 Mbit/s</li><li>STM-16: 2.488 Gbit/s</li></ul>         |
 | Ethernet              | <ul><li>1G: 1 Gbit/s</li><li>10G: 10 Gbit/s</li></ul>                                                    |
 | Fiberoptiska nät      | <ul><li>WDM: fleratalet Tbit/s</li></ul>                                                                 |
 | Satellitkommunikation | Abonnemang                                                                                               |
