@@ -12,7 +12,6 @@ Efter genomförd utbildning ska individen kunna se grundläggande samband mellan
 - Tid och frekvens
 - dB och brus
 - Kapacitet
-- Signalens väg
 
 ### Avgränsningar
 
@@ -31,7 +30,6 @@ TBD
 - [Kapitel 3: Frekvensspektrumet](#chapter-3-frekvensspektrumet)
 - [Kapitel 4: Signal till brus](#chapter-4-signal-till-brus)
 - [Kapitel 5: Kapacitet](#chapter-5-kapacitet)
-- [Kapitel 6: Signalens väg](#chapter-6-signalens_vag)
 
 ---
 
@@ -66,7 +64,7 @@ $y(t) = A \cdot \sin(2 \pi f t + \phi)$
 
 ### Varför är det viktigt?
 
-När en sinusvåg färdas i ett godtyckligt medium, gör den det i form av elektromagnetisk energi och benämns ofta som en *radiosignal*. En sändare genererar signalen som i sin tur tas emot av mottagaren. För att signalen ska kunna bära information behöver sändaren och mottagaren komma överens om ett gemensamt "språk". Sändaren behöver alltså ändra signalens egenskaper så att mottagaren i sin tur kan översätta ändringarna till information.
+När en sinusvåg propagerar i ett godtyckligt medium, gör den det i form av elektromagnetisk energi och benämns ofta som en *radiosignal*. Radiosignalen har en elektrisk och en magnetisk komponent. En sändare genererar signalen som i sin tur tas emot av mottagaren. För att signalen ska kunna bära information behöver sändaren och mottagaren komma överens om ett gemensamt "språk". Sändaren behöver alltså ändra signalens egenskaper så att mottagaren i sin tur kan översätta ändringarna till information.
 
 Dessa egenskapsförändringar, eller anpassningar, benämns *modulation*. När sändaren modulerar en signal och överför den, kommer mottagaren att *demodulera* samma signal för att komma åt informationen. 
 
@@ -133,7 +131,7 @@ I figuren nedan ses en skärmdump tagen över ett skarpt frekvensspektrum. En ra
 
 Utöver att mottagaren tar emot signalen med en viss signalstyrka, allokerar signalens bredd ett visst frekvensutrymme. Signalens bredd benämns bandbredd. Bandbredden är ett mått på det frekvensområde som en signal upptar, och en högre informationsöverföringshastighet kräver ett större frekvensområde för att kunna överföra mer data per tidsenhet.
 
-I foten på nyttosignalerna ses ett blått område som övergår i svart. Området består av brus där "taket" av rektangeln benämns brusgolv. Brus är en signal där vi inte känner signalens tidsfunktion, utan bara dess amplitudspektrum. Brus alstras av flera olika, av varandra oberoende generatorer. Alstringen sker bland annat i atmosfären, i rymden och internt i vår mottagare. Brus har egenskapen att amplituden följer normalfördelningsprincipen.
+I foten på nyttosignalerna ses ett blått område som övergår i svart. Området består av brus där "taket" av rektangeln benämns brusgolv. Brus är en signal där vi inte känner signalens tidsfunktion, utan bara dess amplitudspektrum. Brus alstras av flera olika, av varandra oberoende generatorer och kategoriseras som externt eller internt alstrat brus. Alstringen sker bland annat externt i atmosfären, i rymden och internt i vår mottagare. Brus har egenskapen att amplituden följer normalfördelningsprincipen.
 
 <div align="center">
 
@@ -152,6 +150,8 @@ Den fysikaliska faktorn avgränsar oss till att använda vissa frekvenser även 
 > Vill du börja motta signaler med en mottagare? Hobbyn är billig och kräver ingen särskild förkunskap. Läs mer om [SDR.](https://www.rtl-sdr.com/rtl-sdr-quick-start-guide/)
 
 > Vill du börja sända signaler med en sändare? Då behöver du (nästan alltid) [tillstånd.](https://pts.se/tillstand-och-anmalan/radio/)
+
+> Den svenska [frekvensplanen](https://frekvensplanen.pts.se) finns tillgänglig hos PTS.
 
 </details>
 
@@ -181,7 +181,9 @@ Det logaritmiska måttet dB är ett användbart verktyg när stora och små vär
 
 $dBm = 10 \cdot \log_{10}(mW) + 30$
 
+$mW = 10^{(dBm - 30)/10}$
 
+*"Logaritmer är kanske det räknesättet som orsakat mest förvirring hos svenska skolelever i modern tid, sannolikt helt i onödan."*
 
 <br>
 
@@ -221,7 +223,7 @@ När ett system för kommunikationsöverföring designas måste tillgänglig eff
 
 <br>
 
-Ett sätt att visualisera hur en digital signal uppträder i en mottagare är att använda ett konstellationsdiagram. Desto mer brus som signalen ([QPSK](https://en.wikipedia.org/wiki/Phase-shift_keying)) utsätts för, desto svårare har mottagaren att uppfatta rätt symbol. Resultatet blir att bitfelssannolikheten (BER) ökar med minskad SNR.  
+Ett sätt att visualisera hur en digital signal uppträder i en mottagare är att använda ett konstellationsdiagram. Desto mer brus som signalen ([QPSK](https://en.wikipedia.org/wiki/Phase-shift_keying)) utsätts för, desto svårare har mottagaren att uppfatta rätt symbol. Resultatet blir att bitfelshalten (BER) ökar med minskad SNR.  
 
 <div align="center">
 
@@ -229,9 +231,12 @@ Ett sätt att visualisera hur en digital signal uppträder i en mottagare är at
 
 </div>
 
-> Ett sätt att ta höjd för höga bitfelshalter är att nyttja [kanalkodning.](https://pysdr.org/content/channel_coding.html)
+> Ett sätt att ta höjd för höga bitfelshalter är att nyttja FEC, på svenska [kanalkodning.](https://pysdr.org/content/channel_coding.html)
+
+> BER förkortas både som bitfelshalt (*Bit Error Ratio [%]*) och bitfelstakt (*Bit Error Rate [C]*) beroende på litteratur.
 
 </details>
+
 
 ---
 
@@ -280,13 +285,6 @@ När ett telekomföretag idag investerar i ny kommunikationsteknologi sker det f
 
 ---
 
-<details>
-<summary><h2 id="chapter-6-signalens_vag">Kapitel 6: Signalens väg</h2></summary>
 
-Workshop och labb
 
-</details>
-
----
-
-**Datum uppdaterad:** 2025-04-22
+**Datum uppdaterad:** 2025-11-06
