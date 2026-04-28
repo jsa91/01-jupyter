@@ -21,12 +21,12 @@ Den syftar heller inte till att härleda fysikaliska och matematiska samband uta
 
 ### Tidsåtgång
 
-TBD
+4 timmar
 
 ## Index
 
 - [Kapitel 1: Sinusvågen](#chapter-1-sinusvagen)
-- [Kapitel 2: Tids och frekvensdomän](#chapter-2-tid-v-fq)
+- [Kapitel 2: Tids och frekvensdomän](#chapter-2-tid-och-frekvensdoman)
 - [Kapitel 3: Frekvensspektrumet](#chapter-3-frekvensspektrumet)
 - [Kapitel 4: Signal till brus](#chapter-4-signal-till-brus)
 - [Kapitel 5: Kapacitet](#chapter-5-kapacitet)
@@ -38,7 +38,7 @@ TBD
 
 ### Definition
 
-Oberoende överföringsteknik eller kommunikationsform är det sinusvågen som är möjliggöraren. När sinusvågen färdas i ett godtyckligt medium breder den ut sig likt vågringar på vatten. Vågen existerar i tre dimensioner. 
+Oberoende överföringsteknik eller kommunikationsform är det sinusvågen som är möjliggöraren. När sinusvågen färdas i ett godtyckligt medium breder den ut sig likt tryckvågen från en explosion. Vågen breder ut sig i tre dimensioner.
 
 <br>
 
@@ -64,13 +64,15 @@ $y(t) = A \cdot \sin(2 \pi f t + \phi)$
 
 ### Varför är det viktigt?
 
-När en sinusvåg propagerar i ett godtyckligt medium, gör den det i form av elektromagnetisk energi och benämns ofta som en *radiosignal*. Radiosignalen har en elektrisk och en magnetisk komponent. En sändare genererar signalen som i sin tur tas emot av mottagaren. För att signalen ska kunna bära information behöver sändaren och mottagaren komma överens om ett gemensamt "språk". Sändaren behöver alltså ändra signalens egenskaper så att mottagaren i sin tur kan översätta ändringarna till information.
+När en sinusvåg propagerar genom rymden i form av elektromagnetisk energi benämns den ofta som en *radiosignal*. Radiosignalen har en elektrisk och en magnetisk komponent. En sändare genererar signalen som i sin tur tas emot av mottagaren. För att signalen ska kunna bära information behöver sändaren och mottagaren komma överens om ett gemensamt "språk". Sändaren behöver alltså ändra signalens egenskaper så att mottagaren i sin tur kan översätta ändringarna till information.
 
 Dessa egenskapsförändringar, eller anpassningar, benämns *modulation*. När sändaren modulerar en signal och överför den, kommer mottagaren att *demodulera* samma signal för att komma åt informationen. 
 
 <div align="center">
 
-![Sinusvåg](./am_fm_time_domain.png "AM/FM")
+![AM/FM](./am_fm_time_domain.png "AM/FM")
+
+*Överst: Amplitudmodulerad bärvåg — informationen ligger i amplituden. Underst: Frekvensmodulerad bärvåg — informationen ligger i tätheten mellan vågtopparna.*
 
 </div>
 
@@ -79,7 +81,7 @@ Dessa egenskapsförändringar, eller anpassningar, benämns *modulation*. När s
 ---
 
 <details>
-<summary><h2 id="chapter-2-tid-v-fq">Kapitel 2: Tids och frekvensdomän</h2></summary>
+<summary><h2 id="chapter-2-tid-och-frekvensdoman">Kapitel 2: Tids och frekvensdomän</h2></summary>
 
 ### Definition
 
@@ -97,7 +99,7 @@ Det finns många anledningar till varför det är viktigt att kunna analysera en
 
 <div align="center">
 
-![Domäner](./time_freq_domain.png "Tid/Frekvens")
+![Domäner](./time_freq_domain.jpg "Tid/Frekvens")
 
 </div>
 
@@ -105,7 +107,7 @@ Det finns många anledningar till varför det är viktigt att kunna analysera en
 
 > Frekvensen [ *f* ] är det inverterade värdet av periodtiden [ *T* ]: <br> $f = 1 / T$
 
-> Sambandet mellan ljusets utbredningshastighet c [ *m/s* ] i vakuum, frekvensen f [ *hz* ] och våglängden λ [ m ]: <br> $λ = c / f$ <br>
+> Sambandet mellan ljusets utbredningshastighet c [ *m/s* ] i vakuum, frekvensen f [ *Hz* ] och våglängden λ [ m ]: <br> $λ = c / f$ <br>
 
 > *Transformteori* är ett sammanfattande namn på de delar av matematiken som beskriver transformer. Här kan du läsa mer om [Fouriertransform.](https://sv.wikipedia.org/wiki/Fouriertransform)
 
@@ -127,15 +129,15 @@ Ett frekvensspektrum är ett avgränsat område med frekvenser. Inom radioteknik
 
 </div>
 
-I figuren nedan ses en skärmdump tagen över ett skarpt frekvensspektrum. En radiomottagare som kopplats till en dator har konfigurerats att motta signaler runt omkring 140 MHz - 150 MHz. X-axeln visar frekvensen och y-axeln visar amplituden. Mitt i figuren ses ett antal signaler som i detta fall bär en *nyttosignal*. Flera av de nyttosignaler som mottagaren tar emot har mjukvaran markerat med gula cirklar för att påvisa signalens amplitud. 
+I figuren nedan ses en skärmdump tagen över ett skarpt frekvensspektrum. En radiomottagare som kopplats till en dator har konfigurerats att motta signaler runt omkring 420 MHz - 430 MHz. X-axeln visar frekvensen och y-axeln visar amplituden. Mitt i figuren ses två signaler som i detta fall bär en *nyttosignal*.
 
-Utöver att mottagaren tar emot signalen med en viss signalstyrka, allokerar signalens bredd ett visst frekvensutrymme. Signalens bredd benämns bandbredd. Bandbredden är ett mått på det frekvensområde som en signal upptar, och en högre informationsöverföringshastighet kräver ett större frekvensområde för att kunna överföra mer data per tidsenhet.
+Utöver att mottagaren tar emot signalen med en viss amplitud eller *signalstyrka*, allokerar signalens bredd ett visst frekvensutrymme. Signalens bredd benämns bandbredd. Bandbredden är ett mått på det frekvensområde som en signal upptar, och en högre informationsöverföringshastighet kräver ett större frekvensområde för att kunna överföra mer data per tidsenhet.
 
-I foten på nyttosignalerna ses ett blått område som övergår i svart. Området består av brus där "taket" av rektangeln benämns brusgolv. Brus är en signal där vi inte känner signalens tidsfunktion, utan bara dess amplitudspektrum. Brus alstras av flera olika, av varandra oberoende generatorer och kategoriseras som externt eller internt alstrat brus. Alstringen sker bland annat externt i atmosfären, i rymden och internt i vår mottagare. Brus har egenskapen att amplituden följer normalfördelningsprincipen.
+I foten på nyttosignalerna ses ett ljusblått område. Området består av brus där "taket" på området benämns brusgolv. Brus (*AWGN*) är en signal där vi inte känner signalens tidsfunktion, utan bara dess amplitudspektrum. Brus alstras av flera olika, av varandra oberoende generatorer och kategoriseras som externt eller internt alstrat brus. Alstringen sker bland annat externt i atmosfären, i rymden och internt i vår mottagare. Bruset har egenskapen att amplituden följer *normalfördelningsprincipen* och är alltså jämt fördelat över alla frekvenser.
 
 <div align="center">
 
-![SDR](./sdr.JPG "SDR#")
+![SDR](./sdr.png "SDR#")
 
 </div>
 
@@ -145,7 +147,7 @@ Den fysikaliska faktorn avgränsar oss till att använda vissa frekvenser även 
 
 <br>
 
-> Här kan du förkovra dig i brus; [AGWN.](https://en.wikipedia.org/wiki/Additive_white_Gaussian_noise)
+> Här kan du förkovra dig i brus; [AWGN.](https://en.wikipedia.org/wiki/Additive_white_Gaussian_noise)
 
 > Vill du börja motta signaler med en mottagare? Hobbyn är billig och kräver ingen särskild förkunskap. Läs mer om [SDR.](https://www.rtl-sdr.com/rtl-sdr-quick-start-guide/)
 
@@ -162,9 +164,9 @@ Den fysikaliska faktorn avgränsar oss till att använda vissa frekvenser även 
 
 ### Definition
 
-När en signal sänds från en sändare överförs den med en viss effekt (*W*). Under överföringen utsätts signalen för *dämpning* innan den når mottagaren. Alla delar i signalkedjan som inte förstärker signalen kommer att påverka den negativt, till exempel förlust i kablar eller spridning i fri rymd. Dämpningen är även frekvensberoende, där den ökar med högre frekvenser.
+När en signal sänds från en sändare överförs den med en viss effekt (*W*). Under överföringen utsätts signalen för *dämpning* innan den når mottagaren. Alla delar i signalkedjan som inte förstärker signalen kommer att påverka den negativt, till exempel förlust i kablar eller spridning i fri rymd. Dämpningen är även frekvensberoende — i fri rymd ökar dämpningen med med högre frekvenser.
 
-När mottagaren tar emot signalen, gör den detta med en viss kvalitet. Kvaliteten på signalen kan mätas på olika sätt. Ett vanligt mått är **signal-brus-förhållande** (SNR), vilket representerar skillnaden i nivå mellan signalen och det omgivande bruset. SNR mäts i decibel (dB).
+När mottagaren tar emot signalen, gör den detta med en viss kvalitet. Kvaliteten på signalen kan mätas på olika sätt. Ett vanligt mått är **signal-brus-förhållande** (SNR), vilket är förhållandet mellan signalen och det omgivande brusets effekt. Uttryckt i decibel (*dB*) blir SNR skillnaden mellan signalen och brusets effektnivåer.
 
 
 <div align="center">
@@ -173,15 +175,23 @@ När mottagaren tar emot signalen, gör den detta med en viss kvalitet. Kvalitet
 
 </div>
 
-Det logaritmiska måttet dB är ett användbart verktyg när stora och små värden hanteras samtidigt. Genom att använda dB kan till exempel en hög och låg signalstyrka jämföras även fast de linjära värdena ligger långt från varandra. dB är ett relativt mått och har per definition ingen enhet. Måttet refereras istället till en effektnivå.
+Det logaritmiska måttet dB är ett användbart verktyg när stora och små värden hanteras samtidigt. Genom att använda dB kan till exempel en hög och låg signalstyrka jämföras även fast de linjära värdena ligger långt från varandra. dB är ett relativt mått och har per definition ingen enhet — det uttrycker förhållandet mellan två effekter:
+
+<div align="center">
+
+$dB = 10 \cdot \log_{10}(P_1 / P_2)$
+
+</div>
+
+För absoluta effektnivåer refererar man dB till en bestämd referenseffekt. Vanligast är *dBm*, där referensen är 1 mW:
 
 <br>
 
 <div align="center">
 
-$dBm = 10 \cdot \log_{10}(mW) + 30$
+$dBm = 10 \cdot \log_{10}(P_{mW})$
 
-$mW = 10^{(dBm - 30)/10}$
+$P_{mW} = 10^{dBm/10}$
 
 *"Logaritmer är kanske det räknesättet som orsakat mest förvirring hos svenska skolelever i modern tid, sannolikt helt i onödan."*
 
@@ -207,7 +217,7 @@ $mW = 10^{(dBm - 30)/10}$
 |-------|-------------|
 | 80    | Rundradio   |
 | 60    | Mikrovågsugn|
-| 27    | Mobilsite   |
+| 27    | Mobiltelefon|
 | 15    | WiFi        |
 | 10    | Bluetooth   |
 
@@ -233,7 +243,7 @@ Ett sätt att visualisera hur en digital signal uppträder i en mottagare är at
 
 > Ett sätt att ta höjd för höga bitfelshalter är att nyttja FEC, på svenska [kanalkodning.](https://pysdr.org/content/channel_coding.html)
 
-> BER förkortas både som bitfelshalt (*Bit Error Ratio [%]*) och bitfelstakt (*Bit Error Rate [C]*) beroende på litteratur.
+> BER förkortas både som bitfelshalt (*Bit Error Ratio [%]*) och bitfelstakt (*Bit Error Rate [bitar/s]*) beroende på litteratur.
 
 </details>
 
@@ -246,6 +256,16 @@ Ett sätt att visualisera hur en digital signal uppträder i en mottagare är at
 ### Definition
 
 När en godtycklig mängd information överförs över en *kanal*, har kanalen en specifik kapacitet (*D*), vilket definierar den maximala mängden information som kan överföras per tidsenhet utan att informationen förloras eller förvrängs. Kapaciteten beror på flera faktorer, såsom kanalens bandbredd, signalstyrka samt förekomsten av brus och störningar.
+
+Sambandet mellan dessa storheter ges av *Shannon-Hartleys teorem*, som anger den maximala kapaciteten för en kanal med bandbredd *B* [Hz] och signal-brus-förhållande *S/N*:
+
+<div align="center">
+
+$C = B \cdot \log_2(1 + S/N)$
+
+</div>
+
+Teoremet binder samman de tre föregående kapitlen; ökad bandbredd och högre SNR ger en högre kapacitet.
 
 Kanske den mest fundamentala formen av definierad kapacitet är den som en traditionell telefonförbindelse inom det fasta telenätet erbjuder. Talkodaren för fasta telenätet är en vågformskodare, som känner av (samplar) talsignalens amplitud 8000 ggr per sekund. Spänningen i varje sample beskrivs med 8 databitar.
 
@@ -287,4 +307,4 @@ När ett telekomföretag idag investerar i ny kommunikationsteknologi sker det f
 
 
 
-**Datum uppdaterad:** 2025-11-06
+**Datum uppdaterad:** 2026-04-28
